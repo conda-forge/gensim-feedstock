@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [win32 or osx or py34]
+  skip: true  # [osx or py34]
   features:
     - vc9   # [win and py27]
     - vc10  # [win and py34]
@@ -41,7 +41,7 @@ test:
     - testfixtures
     - morfessor
     - scikit-learn ==0.18.2
-    - pyemd
+    
   imports:
     - gensim
     - gensim.corpora
@@ -74,5 +74,4 @@ about:
 extra:
   recipe-maintainers:
     - souravsingh
-    - tmylk
     - menshikh-iv
