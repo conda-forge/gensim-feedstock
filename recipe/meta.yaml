@@ -55,7 +55,7 @@ test:
     - gensim.test
     - gensim.topic_coherence
   commands:
-    - nosetests --exe -v gensim # [not osx]
+    - nosetests --exe -v gensim  # [not osx]
     
 about:
   home: http://github.com/RaRe-Technologies/gensim
