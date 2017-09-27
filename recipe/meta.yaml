@@ -1,6 +1,6 @@
 {% set name = "gensim" %}
-{% set version = "2.3.0" %}
-{% set sha256 = "7d0dccc7d2c576e270037949874800b7cfbc86ef081ff981483f612cd18e223f" %}
+{% set version = "3.0.0" %}
+{% set sha256 = "076c677bcb5335ce286cdb4a16eb98fe2a0dac3c005502c8984f70e1488ac48f" %}
 
 package:
   name: {{ name|lower }}
@@ -50,7 +50,7 @@ test:
     - gensim.parsing
     - gensim.scripts
     - gensim.similarities
-    - gensim.sklearn_integration
+    - gensim.sklearn_api
     - gensim.summarization
     - gensim.test
     - gensim.topic_coherence
