@@ -50,7 +50,7 @@ test:
     - gensim.parsing
     - gensim.scripts
     - gensim.similarities
-    - gensim.sklearn_integration
+    - gensim.sklearn_api
     - gensim.summarization
     - gensim.test
     - gensim.topic_coherence
