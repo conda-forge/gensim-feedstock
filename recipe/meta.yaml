@@ -1,6 +1,6 @@
 {% set name = "gensim" %}
-{% set version = "2.3.0" %}
-{% set sha256 = "7d0dccc7d2c576e270037949874800b7cfbc86ef081ff981483f612cd18e223f" %}
+{% set version = "3.1.0" %}
+{% set sha256 = "eaf6ece613b47eff19be5b1344e9ac2d65a681f3edd2b8d347458bf87ada8b24" %}
 
 package:
   name: {{ name|lower }}
