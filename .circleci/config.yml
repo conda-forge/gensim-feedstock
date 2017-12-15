@@ -6,7 +6,6 @@ jobs:
     machine: true
     environment:
       - CONDA_PY: "27"
-      - PYTHONHTTPSVERIFY: 0
     steps:
       - checkout
       - run:
@@ -28,7 +27,6 @@ jobs:
     machine: true
     environment:
       - CONDA_PY: "35"
-      - PYTHONHTTPSVERIFY: 0
     steps:
       - checkout
       - run:
@@ -50,7 +48,6 @@ jobs:
     machine: true
     environment:
       - CONDA_PY: "36"
-      - PYTHONHTTPSVERIFY: 0
     steps:
       - checkout
       - run:
