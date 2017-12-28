@@ -43,6 +43,7 @@ test:
     - scikit-learn
     - pyemd
     - mock
+    - boto3
   imports:
     - gensim
     - gensim.corpora
