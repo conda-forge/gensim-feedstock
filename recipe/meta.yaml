@@ -43,8 +43,6 @@ test:
     - scikit-learn
     - pyemd
     - mock
-    - requests
-    - certifi
   imports:
     - gensim
     - gensim.corpora
@@ -61,7 +59,6 @@ test:
     - forge_test.sh
   commands:
     - time bash ./forge_test.sh  # [not win]
-    - nosetests --exe -v gensim
     
 about:
   home: http://github.com/RaRe-Technologies/gensim
