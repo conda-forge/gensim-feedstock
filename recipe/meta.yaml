@@ -43,6 +43,8 @@ test:
     - scikit-learn
     - pyemd
     - mock
+    - requests
+    - certifi
   imports:
     - gensim
     - gensim.corpora
