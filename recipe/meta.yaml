@@ -42,6 +42,7 @@ test:
     - morfessor
     - scikit-learn
     - pyemd
+    - mock
   imports:
     - gensim
     - gensim.corpora
@@ -77,5 +78,4 @@ about:
 extra:
   recipe-maintainers:
     - souravsingh
-    - tmylk
     - menshikh-iv
