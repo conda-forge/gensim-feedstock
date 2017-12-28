@@ -54,7 +54,10 @@ test:
     - gensim.summarization
     - gensim.test
     - gensim.topic_coherence
+  files:
+    - forge_test.sh
   commands:
+    - time bash ./forge_test.sh  # [not win]
     - nosetests --exe -v gensim
     
 about:
