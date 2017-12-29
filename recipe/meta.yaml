@@ -60,6 +60,7 @@ test:
     - forge_test.sh
   commands:
     - time bash ./forge_test.sh  # [not win]
+    - nosetests --exe -v gensim  # [win]
     
 about:
   home: http://github.com/RaRe-Technologies/gensim
