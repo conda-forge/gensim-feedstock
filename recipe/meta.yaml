@@ -61,7 +61,7 @@ test:
   files:
     - forge_test.sh
   commands:
-    - time bash ./forge_test.sh  # [not win]
+    - time bash ./forge_test.sh  # [linux]
     - nosetests --exe -v gensim  # [win]
     - pytest  # [osx]
 about:
