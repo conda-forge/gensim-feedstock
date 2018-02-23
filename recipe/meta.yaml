@@ -63,7 +63,7 @@ test:
   commands:
     - time bash ./forge_test.sh  # [linux]
     - nosetests --exe -v gensim  # [win]
-    - python -m pytest  # [osx]
+    - python -m py.test  # [osx]
 about:
   home: http://github.com/RaRe-Technologies/gensim
   license: LGPL-3.0
