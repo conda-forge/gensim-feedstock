@@ -61,7 +61,7 @@ test:
   commands:
     - time bash ./forge_test.sh  # [not win]
     - nosetests --exe -v gensim  # [win]
-    - python -m unittest # [osx]
+    - python -m unittest  # [osx]
     - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
