@@ -61,8 +61,9 @@ test:
   commands:
     - time bash ./forge_test.sh  # [not win]
     - nosetests --exe -v gensim  # [win]
-    - python -m unittest -v  # [osx]
     - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
+    - python -m unittest -v test_fast.TestFastVersion  # [osx]
+    - python -m unittest -v gensim.test.test_doc2vec.TestDoc2VecModel  # [osx]
 
 about:
   home: http://github.com/RaRe-Technologies/gensim
