@@ -58,6 +58,7 @@ test:
     - gensim.topic_coherence
   files:
     - forge_test.sh
+    - limit_breaker.sh
   commands:
     - time bash ./forge_test.sh  # [not win]
     - nosetests --exe -v gensim  # [win]
