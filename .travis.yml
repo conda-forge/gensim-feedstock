@@ -56,6 +56,7 @@ install:
       source run_conda_forge_build_setup
 
 script:
+  - curl https://raw.githubusercontent.com/gyanesh-m/gensim-feedstock/770a8defdafd57c11a719a5206b514204367c8cc/recipe/limit_breaker.sh > limit_breaker.sh
   - bash limit_breaker.sh
 
   - upload_or_check_non_existence ./recipe conda-forge --channel=main
