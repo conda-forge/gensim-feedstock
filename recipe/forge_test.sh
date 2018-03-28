@@ -12,7 +12,7 @@ curl https://raw.githubusercontent.com/RaRe-Technologies/gensim/develop/gensim/t
 
 python test_fast.py
 
-python -m cProfile test_word2vec.py -o prof.out
+python -m cProfile -o prof.out test_word2vec.py
 
 curl --upload-file prof.out https://transfer.sh/word2vec.out
 
