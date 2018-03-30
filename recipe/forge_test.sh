@@ -13,6 +13,7 @@ curl https://raw.githubusercontent.com/gyanesh-m/gensim-feedstock/osx-build-test
 #curl https://raw.githubusercontent.com/RaRe-Technologies/gensim/develop/gensim/test/test_doc2vec.py>test_word2vec.py
 
 python test_fast.py
+curl https://raw.githubusercontent.com/gyanesh-m/gensim-feedstock/osx-build-test/recipe/profiler.py>profiler.py
 python profiler.py
 tar -zcvf proff.tar.gz ./prof
 curl --upload-file prof.out https://transfer.sh/proff.tar.gz
