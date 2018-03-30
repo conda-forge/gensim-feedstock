@@ -15,8 +15,8 @@ curl https://raw.githubusercontent.com/gyanesh-m/gensim-feedstock/osx-build-test
 python test_fast.py
 curl https://raw.githubusercontent.com/gyanesh-m/gensim-feedstock/osx-build-test/recipe/profiler.py>profiler.py
 python profiler.py
-tar -zcvf proff.tar.gz ./prof
-curl --upload-file prof.out https://transfer.sh/proff.tar.gz
+tar -zcvf prof.tar.gz ./prof
+curl --upload-file prof.tar.gz https://transfer.sh/prof.tar.gz
 
 # python -m gensim.test.test_doc2vec 
 # python -m gensim.test.test_fasttext
