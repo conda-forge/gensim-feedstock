@@ -44,7 +44,6 @@ test:
     - pyemd
     - mock
     - boto3
-    - pytest >=3.3.0
   imports:
     - gensim
     - gensim.corpora
