@@ -25,7 +25,7 @@ requirements:
   build:
     - python
     - setuptools
-    - blas 1.1 {{ variant }}
+    - blas 1.1
     - openblas 0.2.20|0.2.20.*
     - numpy >=1.11.3
     - scipy >=0.18.1
@@ -33,7 +33,7 @@ requirements:
     - smart_open >=1.2.1
   run:
     - python
-    - blas 1.1 {{ variant }}
+    - blas 1.1
     - openblas 0.2.20|0.2.20.*
     - numpy >=1.11.3
     - scipy >=0.18.1
