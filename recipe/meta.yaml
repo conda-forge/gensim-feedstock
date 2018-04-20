@@ -24,6 +24,7 @@ build:
 requirements:
   build:
     - python
+    - gcc          # [osx]
     - setuptools
     - blas 1.1
     - openblas 0.2.20|0.2.20.*
@@ -68,7 +69,7 @@ test:
   commands:
     - time bash ./forge_test.sh  # [not win]
     - nosetests --exe -v gensim  # [win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
+    - conda inspect objects -p $PREFIX gensim  # [osx]
 
 about:
   home: http://github.com/RaRe-Technologies/gensim
