@@ -26,8 +26,8 @@ requirements:
     - python
     - gcc          # [osx]
     - setuptools
-    - blas 1.1      # [not win]
-    - openblas 0.2.20|0.2.20.* # [not win]
+    - blas 1.1  # [not win]
+    - openblas 0.2.20|0.2.20.*  # [not win]
     - numpy >=1.11.3
     - scipy >=0.18.1
     - six >=1.5.0
