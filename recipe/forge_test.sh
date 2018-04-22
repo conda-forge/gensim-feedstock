@@ -22,6 +22,13 @@ library_dirs = $PREFIX/lib
 include_dirs = $PREFIX/include
 EOF
 
+if [[ $(uname) == 'Darwin' ]]; then
+    export CFLAGS="${CFLAGS} -stdlib=libc++ -lc++"
+    export LDFLAGS="-headerpad_max_install_names -undefined dynamic_lookup -bundle -Wl,-search_paths_first -lc++"
+else
+    unset LDFLAGS
+fi
+
 python -m pip install -U pip nose
 pip install -U gensim
 curl https://raw.githubusercontent.com/gyanesh-m/gensim-feedstock/osx-build-test/recipe/test_fast.py>test_fast.py
