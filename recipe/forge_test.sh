@@ -5,9 +5,6 @@ set -e -x
 unset REQUESTS_CA_BUNDLE
 unset SSL_CERT_FILE
 
-export OPENBLAS_NUM_THREADS=1
-
-
 cat > site.cfg << EOF
 
 [DEFAULT]
