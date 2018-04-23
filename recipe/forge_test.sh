@@ -5,19 +5,9 @@ set -e -x
 unset REQUESTS_CA_BUNDLE
 unset SSL_CERT_FILE
 
-cat > site.cfg << EOF
-
-[DEFAULT]
-library_dirs = $PREFIX/lib
-include_dirs = $PREFIX/include
-[atlas]
-atlas_libs = openblas
-libraries = openblas
-[openblas]
-libraries = openblas
-library_dirs = $PREFIX/lib
-include_dirs = $PREFIX/include
-EOF
+export LIBRARY_PATH="${PREFIX}/lib"
+export C_INCLUDE_PATH="${PREFIX}/include"
+export CPLUS_INCLUDE_PATH="${PREFIX}/include"
 
 if [[ $(uname) == 'Darwin' ]]; then
     export CFLAGS="${CFLAGS} -stdlib=libc++ -lc++"
