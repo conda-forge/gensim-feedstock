@@ -14,10 +14,13 @@ source:
 build:
   number: 0
   skip: true  # [win32 or osx or py34]
-  features:
-    - vc9   # [win and py27]
-    - vc10  # [win and py34]
-    - vc14  # [win and (py35 or py36)]
+  build:
+    - {{ compiler("cxx") }}
+  host:
+    - python
+    - cython
+  run:
+    - python
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
