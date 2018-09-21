@@ -14,13 +14,6 @@ source:
 build:
   number: 0
   skip: true  # [win32 or osx or py34]
-  build:
-    - {{ compiler("cxx") }}
-  host:
-    - python
-    - cython
-  run:
-    - python
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -31,6 +24,10 @@ requirements:
     - scipy >=0.18.1
     - six >=1.5.0
     - smart_open >=1.2.1
+    - {{ compiler("cxx") }}
+  host:
+    - python
+    - cython
   run:
     - python
     - numpy >=1.11.3
