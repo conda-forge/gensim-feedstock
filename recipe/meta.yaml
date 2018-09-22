@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/RaRe-Technologies/gensim/releases/download/untagged-46395d128a499d1d8ac1/{{ name }}-{{ version }}.tar.gz
+  url: https://github.com/RaRe-Technologies/gensim/releases/download/0.12.3/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
