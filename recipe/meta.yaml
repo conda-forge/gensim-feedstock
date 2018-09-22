@@ -1,6 +1,6 @@
 {% set name = "gensim" %}
 {% set version = "3.6.0" %}
-{% set sha256 = "24adaca52e8d821a2f5d5e6fe2e37cf321b1fafb505926ea79a7c2f019ce5b07" %}
+{% set sha256 = "78151440bbc030fbeb0cc5eefb30e44c709174ac749b4d74de52632126d8541d" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://github.com/RaRe-Technologies/gensim/releases/download/untagged-46395d128a499d1d8ac1/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
