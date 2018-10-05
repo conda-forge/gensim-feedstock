@@ -1,6 +1,6 @@
 {% set name = "gensim" %}
 {% set version = "3.6.0" %}
-{% set sha256 = "78151440bbc030fbeb0cc5eefb30e44c709174ac749b4d74de52632126d8541d" %}
+{% set sha256 = "9ad4014f85aaff985a5780e999807566a17faef67d9ab3f005d40bce1b8c9517" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/RaRe-Technologies/gensim/releases/download/0.12.3/{{ name }}-{{ version }}.tar.gz
+  url: https://github.com/conda-forge/gensim-feedstock/files/2449277/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
