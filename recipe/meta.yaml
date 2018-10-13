@@ -1,6 +1,6 @@
 {% set name = "gensim" %}
-{% set version = "3.6.0" %}
-{% set sha256 = "9ad4014f85aaff985a5780e999807566a17faef67d9ab3f005d40bce1b8c9517" %}
+{% set version = "3.5.0" %}
+{% set sha256 = "78ed9b6ac35f104542f3bee0386d71ddf9432d74c153065d2ea9f6baf10e5b49" %}
 
 package:
   name: {{ name|lower }}
@@ -8,28 +8,29 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/conda-forge/gensim-feedstock/files/2449277/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   number: 0
   skip: true  # [win32 or osx or py34]
+  features:
+    - vc9   # [win and py27]
+    - vc10  # [win and py34]
+    - vc14  # [win and (py35 or py36)]
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
   build:
-    - {{ compiler("cxx") }}
-  host:
     - python
-    - cython
     - setuptools
-    - numpy 1.11.*
+    - numpy >=1.11.3
     - scipy >=0.18.1
     - six >=1.5.0
     - smart_open >=1.2.1
   run:
     - python
-    - {{ pin_compatible("numpy") }}
+    - numpy >=1.11.3
     - scipy >=0.18.1
     - six >=1.5.0
     - smart_open >=1.2.1
