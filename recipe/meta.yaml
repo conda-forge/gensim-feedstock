@@ -7,7 +7,6 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
@@ -18,13 +17,10 @@ build:
     - vc9   # [win and py27]
     - vc10  # [win and py34]
     - vc14  # [win and (py35 or py36)]
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
-    - python
-    - setuptools
-    - numpy >=1.11.3
     - scipy >=0.18.1
     - six >=1.5.0
     - smart_open >=1.2.1
@@ -32,7 +28,8 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - python
-    - numpy
+    - pip
+    - numpy >=1.11.3
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   run:
