@@ -13,30 +13,28 @@ source:
 build:
   number: 1000
   skip: true  # [win32 or osx or py34]
-  features:
-    - vc9   # [win and py27]
-    - vc10  # [win and py34]
-    - vc14  # [win and (py35 or py36)]
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   build:
     - {{ compiler('c') }}
+  host:
+    - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
     - python
     - pip
-    - numpy >=1.11.3
+    - {{ pin_compatible('numpy') }}
     - scipy >=0.18.1
     - six >=1.5.0
     - smart_open >=1.2.1
   run:
     - python
-    - numpy >=1.11.3
+    - {{ pin_compatible('numpy') }}
     - scipy >=0.18.1
     - six >=1.5.0
     - smart_open >=1.2.1
-    
+
 test:
   requires:
     - nose
@@ -63,7 +61,7 @@ test:
   commands:
     - time bash ./forge_test.sh  # [not win]
     - nosetests --exe -v gensim  # [win]
-    
+
 about:
   home: http://github.com/RaRe-Technologies/gensim
   license: LGPL-3.0
@@ -71,9 +69,9 @@ about:
   license_family: LGPL
   summary: 'Topic Modelling for Humans'
   description: |
-    Gensim is a Python library for topic modelling, document indexing 
-    and similarity retrieval with large corpora. 
-    Target audience is the natural language processing (NLP) 
+    Gensim is a Python library for topic modelling, document indexing
+    and similarity retrieval with large corpora.
+    Target audience is the natural language processing (NLP)
     and information retrieval (IR) community.
   doc_url: http://radimrehurek.com/gensim/
   dev_url: https://github.com/RaRe-Technologies/gensim
