@@ -18,13 +18,11 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-  host:
-    - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
     - python
     - pip
-    - {{ pin_compatible('numpy') }}
+    - numpy
     - scipy >=0.18.1
     - six >=1.5.0
     - smart_open >=1.2.1
