@@ -17,19 +17,19 @@ build:
     - vc9   # [win and py27]
     - vc10  # [win and py34]
     - vc14  # [win and (py35 or py36)]
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   build:
-    - scipy >=0.18.1
-    - six >=1.5.0
-    - smart_open >=1.2.1
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
     - python
     - pip
     - numpy >=1.11.3
+    - scipy >=0.18.1
+    - six >=1.5.0
+    - smart_open >=1.2.1
   run:
     - python
     - numpy >=1.11.3
