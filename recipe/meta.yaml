@@ -1,13 +1,13 @@
 {% set name = "gensim" %}
-{% set version = "3.5.0" %}
-{% set sha256 = "78ed9b6ac35f104542f3bee0386d71ddf9432d74c153065d2ea9f6baf10e5b49" %}
+{% set version = "3.6.0" %}
+{% set sha256 = "cad41fa49201456307d4954d8787d8bd30eaefe424bd238303181ed57a1080f1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://github.com/conda-forge/gensim-feedstock/files/2764043/gensim-3.6.0.tar.gz
   sha256: {{ sha256 }}
 
 build:
