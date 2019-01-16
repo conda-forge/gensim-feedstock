@@ -1,7 +1,9 @@
+<!--
+# -*- mode: jinja -*-
+-->
+
 About gensim
 ============
-
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
 
 Home: http://github.com/RaRe-Technologies/gensim
 
@@ -14,7 +16,7 @@ Summary: Topic Modelling for Humans
 Gensim is a Python library for topic modelling, document indexing
 and similarity retrieval with large corpora.
 Target audience is the natural language processing (NLP)
-and information retrieval (IR) community. 
+and information retrieval (IR) community.
 
 
 Current build status
@@ -55,6 +57,8 @@ conda search gensim --channel conda-forge
 
 About conda-forge
 =================
+
+[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
