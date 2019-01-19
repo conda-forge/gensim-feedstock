@@ -42,6 +42,7 @@ test:
     - pyemd
     - mock
     - boto3
+    - python-Levenshtein
   imports:
     - gensim
     - gensim.corpora
