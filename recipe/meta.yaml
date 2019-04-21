@@ -22,7 +22,7 @@ requirements:
   host:
     - python
     - pip
-    - numpy
+    - numpy 1.11.3
     - scipy >=0.18.1
     - six >=1.5.0
     - smart_open >=1.2.1
@@ -42,6 +42,7 @@ test:
     - pyemd
     - mock
     - boto3
+    - python-Levenshtein
   imports:
     - gensim
     - gensim.corpora
@@ -77,4 +78,4 @@ about:
 extra:
   recipe-maintainers:
     - souravsingh
-    - menshikh-iv
+    - mpenkov
