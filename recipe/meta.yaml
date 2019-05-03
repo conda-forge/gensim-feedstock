@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win32 or osx]
   script: "{{ PYTHON }} -m pip install . -vv"
 
@@ -63,7 +63,7 @@ test:
 
 about:
   home: http://github.com/RaRe-Technologies/gensim
-  license: LGPL-3.0
+  license: LGPL-2.1
   license_file: COPYING
   license_family: LGPL
   summary: 'Topic Modelling for Humans'

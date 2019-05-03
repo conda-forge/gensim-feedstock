@@ -3,7 +3,7 @@ About gensim
 
 Home: http://github.com/RaRe-Technologies/gensim
 
-Package license: LGPL-3.0
+Package license: LGPL-2.1
 
 Feedstock license: BSD 3-Clause
 
@@ -93,6 +93,7 @@ Current build status
       <img src="https://img.shields.io/badge/OSX-disabled-lightgrey.svg" alt="OSX disabled">
     </td>
   </tr>
+![ppc64le disabled](https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg)
 </table>
 
 Current release info
@@ -187,6 +188,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@menshikh-iv](https://github.com/menshikh-iv/)
+* [@mpenkov](https://github.com/mpenkov/)
 * [@souravsingh](https://github.com/souravsingh/)
 
