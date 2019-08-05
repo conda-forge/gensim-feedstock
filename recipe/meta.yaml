@@ -12,7 +12,7 @@ source:
 
 build:
   number: 1
-  skip: true  # [win32 or osx]
+  skip: true  # [win32]
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
