@@ -2,7 +2,7 @@ appveyor:
   secure: {BINSTAR_TOKEN: tumuXLL8PU75WMnRDemRy02ruEq2RpNxeK3dz0MjFssnosPm2v4EFjfNB4PTotA1}
 compiler_stack: comp7
 max_py_ver: '37'
-min_py_ver: '36'
+max_r_ver: '35'
 travis:
   secure: {BINSTAR_TOKEN: QpGuzzXFPTvyzNL+WqT7akzIappWNMxOucrsvSaV8Am3tMpJuWtbtgOaIESuEtnOE5S5lCAM3jY+FTc/7lE5W7IarltxC1gXeIAyr7YoWno4p7WdD4JrzoDdpnNEkZ+WId2Febv9RwSukHH3Ls/KP1RTEqR7tCw4lYyY53eNdR0PAC5pVwlg1wy1lwnrHe8dxb0XwiUjSZ9WiT66iAU/IaRCwXn/MybkLAdwAj1j+lwty+1IYIN5rLYBn1TSlzrQ8LBmvS60i4LprRYqOv7ZrXasPlmR8pdsdbkkX//+i1xAWHGRPV+a4uvLFT9rmU0YpN+sJAX9yMXqBIgPmtGNMOpr3fjPSdGfph2bN3ZB9kE1QCLaHAuUxoN+SNe6iYZ5Vwlhc9neKPmGgM/L4rSsgWRpohrImv+4N4Ox+87TzHg4EkrUkVh10+EiIbtHAc15/aqQq8YuL7b7GSbzshCpIuoUEwT2SdTLiGmjdTx/vnBq/oE5Yao7V5HX5uN0Mm/iqAsDigjDlLY0UuSgCVn5EJD4bCiX/TnyjtTLohtcQihq8WP+kGecv9Gwh4rJQe25P9Mo3vGradiQ+8uEXUclzSJyJzYxyn2+fhB5GDmfzZV08aWECpZ1oRxGe5+yzs0bFz/4R4UHwepFWdD4/8hWiHM4rv3Cv79NKiQQy17uOpo=}
 provider:
