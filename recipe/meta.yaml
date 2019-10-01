@@ -1,6 +1,6 @@
 {% set name = "gensim" %}
-{% set version = "3.7.3" %}
-{% set sha256 = "621fe72ee1bb0e16008c34f9f5ca6168bbfc82fc85907f7254974776e482e156" %}
+{% set version = "3.8.1" %}
+{% set sha256 = "33277fc0a8d7b0c7ce70fcc74bb82ad39f944c009b334856c6e86bf552b1dfdc" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win32 or osx]
   script: "{{ PYTHON }} -m pip install . -vv"
 
