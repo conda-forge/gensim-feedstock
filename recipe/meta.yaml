@@ -1,19 +1,17 @@
-{% set name = "gensim" %}
 {% set version = "3.8.1" %}
-{% set sha256 = "33277fc0a8d7b0c7ce70fcc74bb82ad39f944c009b334856c6e86bf552b1dfdc" %}
 
 package:
-  name: {{ name|lower }}
+  name: gensim
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/g/gensim/gensim-{{ version }}.tar.gz
+  sha256: 33277fc0a8d7b0c7ce70fcc74bb82ad39f944c009b334856c6e86bf552b1dfdc
 
 build:
-  number: 1
-  skip: true  # [py==27]
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 2
+  skip: true  # [py27]
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
@@ -22,7 +20,7 @@ requirements:
   host:
     - python
     - pip
-    - numpy >=1.11.3
+    - numpy
     - scipy >=0.18.1
     - six >=1.5.0
     - smart_open >=1.2.1
@@ -38,11 +36,11 @@ test:
     - nose
     - testfixtures
     - morfessor
-    - scikit-learn
+    # - scikit-learn
     - pyemd
     - mock
     - boto3
-    - python-Levenshtein
+    - python-levenshtein
   imports:
     - gensim
     - gensim.corpora
@@ -51,7 +49,7 @@ test:
     - gensim.parsing
     - gensim.scripts
     - gensim.similarities
-    - gensim.sklearn_api
+    # - gensim.sklearn_api
     - gensim.summarization
     - gensim.test
     - gensim.topic_coherence
