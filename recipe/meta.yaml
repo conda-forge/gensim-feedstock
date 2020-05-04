@@ -63,9 +63,8 @@ test:
 
 about:
   home: http://github.com/RaRe-Technologies/gensim
-  license: LGPL-2.1
+  license: LGPL-2.1-only
   license_file: COPYING
-  license_family: LGPL
   summary: Topic Modelling for Humans
   description: |
     Gensim is a Python library for topic modelling, document indexing
