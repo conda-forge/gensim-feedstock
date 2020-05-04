@@ -1,6 +1,6 @@
 {% set name = "gensim" %}
-{% set version = "3.8.1" %}
-{% set sha256 = "33277fc0a8d7b0c7ce70fcc74bb82ad39f944c009b334856c6e86bf552b1dfdc" %}
+{% set version = "3.8.3" %}
+{% set sha256 = "786adb0571f75114e9c5f7a31dd2e6eb39a9791f22c8757621545e2ded3ea367" %}
 
 package:
   name: {{ name|lower }}
@@ -11,9 +11,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py==27]
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -66,7 +66,7 @@ about:
   license: LGPL-2.1
   license_file: COPYING
   license_family: LGPL
-  summary: 'Topic Modelling for Humans'
+  summary: Topic Modelling for Humans
   description: |
     Gensim is a Python library for topic modelling, document indexing
     and similarity retrieval with large corpora.
