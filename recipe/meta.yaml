@@ -47,12 +47,9 @@ test:
     - gensim
     - gensim.corpora
     - gensim.models
-    - gensim.models.wrappers
     - gensim.parsing
     - gensim.scripts
     - gensim.similarities
-    - gensim.sklearn_api
-    - gensim.summarization
     - gensim.test
     - gensim.topic_coherence
   files:
