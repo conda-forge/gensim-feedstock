@@ -34,15 +34,6 @@ requirements:
     - smart_open >=1.8.1
 
 test:
-  requires:
-    - nose
-    - testfixtures
-    - morfessor
-    - scikit-learn
-    - pyemd
-    - mock
-    - boto3
-    - python-Levenshtein
   imports:
     - gensim
     - gensim.corpora
@@ -52,11 +43,6 @@ test:
     - gensim.similarities
     - gensim.test
     - gensim.topic_coherence
-  files:
-    - forge_test.sh
-  commands:
-    - time bash ./forge_test.sh  # [not win]
-    - nosetests --exe -v gensim  # [win]
 
 about:
   home: http://github.com/RaRe-Technologies/gensim
