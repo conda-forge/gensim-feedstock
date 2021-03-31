@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 3
   skip: true  # [py==27]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -34,32 +34,15 @@ requirements:
     - smart_open >=1.8.1
 
 test:
-  requires:
-    - nose
-    - testfixtures
-    - morfessor
-    - scikit-learn
-    - pyemd
-    - mock
-    - boto3
-    - python-Levenshtein
   imports:
     - gensim
     - gensim.corpora
     - gensim.models
-    - gensim.models.wrappers
     - gensim.parsing
     - gensim.scripts
     - gensim.similarities
-    - gensim.sklearn_api
-    - gensim.summarization
     - gensim.test
     - gensim.topic_coherence
-  files:
-    - forge_test.sh
-  commands:
-    - time bash ./forge_test.sh  # [not win]
-    - nosetests --exe -v gensim  # [win]
 
 about:
   home: http://github.com/RaRe-Technologies/gensim
