@@ -1,6 +1,6 @@
 {% set name = "gensim" %}
-{% set version = "3.8.3" %}
-{% set sha256 = "786adb0571f75114e9c5f7a31dd2e6eb39a9791f22c8757621545e2ded3ea367" %}
+{% set version = "4.0.0" %}
+{% set sha256 = "a9c9fed52e2901ad04f9caf73a5dd782e5ce8054f71b346d72f04ddff1b7b432" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 4
+  number: 0
   skip: true  # [py==27]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -27,6 +27,7 @@ requirements:
     - six >=1.5.0
     - smart_open >=1.8.1
   run:
+    - dataclasses  # [py<37]    
     - python
     - {{ pin_compatible('numpy') }}
     - scipy >=0.18.1
