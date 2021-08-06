@@ -11,6 +11,9 @@ jobs:
       win_64_python3.6.____cpython:
         CONFIG: win_64_python3.6.____cpython
         UPLOAD_PACKAGES: 'True'
+      win_64_python3.7.____73_pypy:
+        CONFIG: win_64_python3.7.____73_pypy
+        UPLOAD_PACKAGES: 'True'
       win_64_python3.7.____cpython:
         CONFIG: win_64_python3.7.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -95,7 +98,7 @@ jobs:
 
     - script: |
         call activate base
-        conda.exe build "recipe" -m .ci_support\%CONFIG%.yaml
+        conda.exe build "recipe" -m .ci_support\%CONFIG%.yaml --suppress-variables
       displayName: Build recipe
       env:
         PYTHONUNBUFFERED: 1
