@@ -354,6 +354,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@mpenkov](https://github.com/mpenkov/)
-* [@souravsingh](https://github.com/souravsingh/)
+Currently looking for maintainers!
 
