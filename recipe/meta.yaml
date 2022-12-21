@@ -1,5 +1,5 @@
 {% set name = "gensim" %}
-{% set version = "4.2.0" %}
+{% set version = "4.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 995ebd2970a31d47c100aaac10212f47e2bf12e2b06536d38883c951ff34eef1
+  sha256: 64bd7ec62990215878822e8b2569d1835054f56cdf53600ddfe9927e31f3b48d
 
 build:
   number: 0
