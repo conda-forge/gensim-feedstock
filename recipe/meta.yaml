@@ -10,7 +10,7 @@ source:
   sha256: 99ac6af6ffd40682e70155ed9f92ecbf4384d59fb50af120d343ea5ee1b308ab
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -19,6 +19,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
     - python
@@ -30,7 +31,6 @@ requirements:
   run:
     - dataclasses  # [py<37]
     - python
-    - {{ pin_compatible('numpy') }}
     - scipy >=0.18.1
     - six >=1.5.0
     - smart_open >=1.8.1
