@@ -24,13 +24,9 @@ requirements:
   host:
     - python
     - pip
-    - numpy
-    - scipy >=0.18.1
-    - six >=1.5.0
-    - smart_open >=1.8.1
   run:
     - dataclasses  # [py<37]
-    - python
+    - python <=3.11
     - {{ pin_compatible('numpy') }}
     - scipy >=0.18.1
     - six >=1.5.0
