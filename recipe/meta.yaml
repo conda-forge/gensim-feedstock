@@ -23,7 +23,7 @@ requirements:
     - python
     - cython >=0.29.32,<3.0.0
     - numpy ==1.18.5  # [py==38]
-    - oldest-supported-numpy  # [py>38]
+    - {{ pin_compatible('numpy') }}  # [py>38]
     - setuptools
     - wheel
     - wheelhouse_uploader
