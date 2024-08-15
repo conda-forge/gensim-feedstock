@@ -25,6 +25,7 @@ requirements:
     - python
     - pip
     - numpy
+    - cython
   run:
     - dataclasses  # [py<37]
     - python
