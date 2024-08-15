@@ -22,11 +22,15 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
+    - {{ compiler('fortran') }}
+    - meson
   host:
     - python
     - pip
     - numpy
     - cython
+    - libblas
+    - liblapack
   run:
     - dataclasses  # [py<37]
     - python
