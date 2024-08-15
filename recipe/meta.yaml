@@ -17,11 +17,13 @@ build:
 requirements:
   build:
     - {{ compiler("c") }}
+    - {{ compiler("cxx") }}
     - cross-python_{{ target_platform }}    # [build_platform != target_platform]
     - python                                # [build_platform != target_platform]
     - cython                                # [build_platform != target_platform]
     - numpy                                 # [build_platform != target_platform]
     - {{ stdlib("c") }}
+    - {{ stdlib("cxx") }}
   host:
     - python
     - pip
@@ -29,7 +31,7 @@ requirements:
     - numpy
   run:
     - python
-    - scipy >=0.18.1
+    - scipy >=1.7.0,<1.14.0
     - smart-open >=1.8.1
     - {{ pin_compatible('numpy') }}
     - six >=1.5.0
