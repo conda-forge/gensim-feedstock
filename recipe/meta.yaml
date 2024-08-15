@@ -10,31 +10,31 @@ source:
   sha256: 84852076a6a3d88d7dac5be245e24c21c3b819b565e14c1b61fa3e5ee76dcf57
 
 build:
-  skip: true  # [py<38]
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
-    - {{ compiler("c") }}
-    - {{ compiler("cxx") }}
-    - cross-python_{{ target_platform }}    # [build_platform != target_platform]
-    - python                                # [build_platform != target_platform]
-    - cython                                # [build_platform != target_platform]
-    - numpy                                 # [build_platform != target_platform]
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - numpy                                  # [build_platform != target_platform]
+    - {{ compiler('c') }}
     - {{ stdlib("c") }}
-    - {{ stdlib("cxx") }}
+    - {{ compiler('cxx') }}
   host:
     - python
     - pip
-    - cython
     - numpy
-  run:
-    - python
-    - scipy >=1.7.0,<1.14.0
-    - smart-open >=1.8.1
-    - {{ pin_compatible('numpy') }}
+    - scipy >=0.18.1
     - six >=1.5.0
+    - smart_open >=1.8.1
+  run:
+    - dataclasses  # [py<37]
+    - python
+    - {{ pin_compatible('numpy') }}
+    - scipy >=0.18.1
+    - six >=1.5.0
+    - smart_open >=1.8.1
 
 test:
   imports:
