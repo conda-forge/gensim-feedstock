@@ -1,5 +1,5 @@
 {% set name = "gensim" %}
-{% set version = "4.3.2" %}
+{% set version = "4.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 99ac6af6ffd40682e70155ed9f92ecbf4384d59fb50af120d343ea5ee1b308ab
+  sha256: 84852076a6a3d88d7dac5be245e24c21c3b819b565e14c1b61fa3e5ee76dcf57
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
+  skip: true  # [py==312]
 
 requirements:
   build:
@@ -19,14 +20,12 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
     - python
     - pip
     - numpy
-    - scipy >=0.18.1
-    - six >=1.5.0
-    - smart_open >=1.8.1
   run:
     - dataclasses  # [py<37]
     - python
