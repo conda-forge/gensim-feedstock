@@ -10,7 +10,7 @@ source:
   sha256: 84852076a6a3d88d7dac5be245e24c21c3b819b565e14c1b61fa3e5ee76dcf57
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py==312]
 
@@ -29,7 +29,6 @@ requirements:
   run:
     - dataclasses  # [py<37]
     - python
-    - {{ pin_compatible('numpy') }}
     - scipy >=0.18.1
     - six >=1.5.0
     - smart_open >=1.8.1
