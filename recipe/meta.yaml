@@ -20,14 +20,14 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - python
+    - python <=3.9
     - pip
     - numpy >=1.11.3
     - scipy >=0.18.1,<1.13
     - six >=1.5.0
     - smart_open >=1.8.1
   run:
-    - python
+    - python <=3.9
     - {{ pin_compatible('numpy') }}
     - scipy >=0.18.1,<1.13
     - six >=1.5.0
