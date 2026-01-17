@@ -6,12 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a3f5b626da5518e79a479140361c663089fe7998df8ba52d56e1ded71ac5bdf5
+  url: https://github.com/piskvorky/gensim/archive/{{ version }}.tar.gz
+  sha256: 0c1c8984f18512aba04332b45dc58698ac277dfa1d314a190a3f07edc48c31ac
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install -e . -vv --no-deps --no-build-isolation
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   build:
