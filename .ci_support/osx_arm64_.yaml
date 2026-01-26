@@ -23,7 +23,7 @@ macos_machine:
 numpy:
 - '2'
 setuptools:
-- '79'
+- '70'
 target_platform:
 - osx-arm64
 zip_keys:

@@ -19,7 +19,7 @@ docker_image:
 numpy:
 - '2'
 setuptools:
-- '79'
+- '70'
 target_platform:
 - linux-64
 zip_keys:
