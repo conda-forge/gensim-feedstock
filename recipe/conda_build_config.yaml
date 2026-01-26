@@ -1,4 +1,4 @@
-c_compiler_version: # [osx]
-    - "18" # [osx]
-cxx_compiler_version: # [osx]
-    - "18" # [osx]
+c_compiler_version: # [osx-arm64]
+    - "18" # [osx-arm64]
+cxx_compiler_version: # [osx-arm64]
+    - "18" # [osx-arm64]
