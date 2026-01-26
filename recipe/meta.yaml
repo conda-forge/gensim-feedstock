@@ -24,6 +24,8 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
+    - setuptools
+    - pip
   host:
     - python <=3.9
     - pip
