@@ -19,7 +19,7 @@ requirements:
   build:
     - python <=3.9                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - numpy                                # [build_platform != target_platform]
+    - {{ pin_compatible('numpy') }}                               # [build_platform != target_platform]
     - libxcrypt  # [linux and build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
@@ -29,7 +29,7 @@ requirements:
   host:
     - python <=3.9
     - pip
-    - numpy >=1.11.3
+    - {{ pin_compatible('numpy') }}
     - scipy >=0.18.1,<1.13
     - six >=1.5.0
     - smart_open >=1.8.1  
