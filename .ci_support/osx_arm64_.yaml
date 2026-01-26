@@ -22,6 +22,8 @@ macos_machine:
 - arm64-apple-darwin20.0.0
 numpy:
 - '2'
+setuptools:
+- '79'
 target_platform:
 - osx-arm64
 zip_keys:

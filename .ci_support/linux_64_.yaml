@@ -18,6 +18,8 @@ docker_image:
 - quay.io/condaforge/linux-anvil-x86_64:alma9
 numpy:
 - '2'
+setuptools:
+- '79'
 target_platform:
 - linux-64
 zip_keys:
