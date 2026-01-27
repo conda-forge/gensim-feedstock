@@ -26,8 +26,6 @@ requirements:
     - {{ compiler('cxx') }}
     - setuptools
     - pip
-    - cython # [target_platform == "osx-arm64"]
-    - libcxx # [target_platform == "osx-arm64"]
   host:
     - python <=3.9
     - pip
@@ -36,9 +34,7 @@ requirements:
     - six >=1.5.0
     - smart_open >=1.8.1  
     - setuptools
-    - libxcrypt  # [linux]
-    - cython # [target_platform == "osx-arm64"]
-    - libcxx # [target_platform == "osx-arm64"]    
+    - libxcrypt  # [linux] 
   run:
     - python <=3.9
     - {{ pin_compatible('numpy') }}
