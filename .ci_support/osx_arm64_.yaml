@@ -22,12 +22,6 @@ macos_machine:
 - arm64-apple-darwin20.0.0
 numpy:
 - '2'
-pin_run_as_build:
-  python:
-    min_pin: x.x
-    max_pin: x.x
-python:
-- 3.10.* *_cpython
 setuptools:
 - '70'
 target_platform:
