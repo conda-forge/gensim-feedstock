@@ -20,12 +20,13 @@ requirements:
     - python <=3.9                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy =1.26.4                               # [build_platform != target_platform]
-    - libxcrypt  # [build_platform != target_platform]
+    - libxcrypt  # [linux and build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - setuptools
     - pip
+    - cython # [target_platform == osx-arm64]
   host:
     - python <=3.9
     - pip
@@ -34,7 +35,8 @@ requirements:
     - six >=1.5.0
     - smart_open >=1.8.1  
     - setuptools
-    - libxcrypt  # [linux or arm64]      
+    - libxcrypt  # [linux]
+    - cython # [osx-arm64]    
   run:
     - python <=3.9
     - {{ pin_compatible('numpy') }}
