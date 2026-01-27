@@ -12,6 +12,7 @@ source:
 
 build:
   number: 6
+  skip: true  # [py>=313] #Numpy is only avalaible as 2.* version on Python 313 and 314
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
@@ -20,7 +21,6 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy <2                              # [build_platform != target_platform]
     - libxcrypt  # [linux and build_platform != target_platform]
-    - scipy >=0.18.1,<1.13                                 # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
@@ -35,7 +35,6 @@ requirements:
     - smart_open >=1.8.1  
     - setuptools
     - libxcrypt  # [linux]
-    - scipy >=0.18.1,<1.13
   run:
     - python
     - {{ pin_compatible('numpy') }}
