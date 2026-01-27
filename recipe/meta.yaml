@@ -20,7 +20,7 @@ requirements:
     - python <=3.9                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy =1.26.4                               # [build_platform != target_platform]
-    - libxcrypt  # [linux and build_platform != target_platform]
+    - libxcrypt  # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
@@ -34,7 +34,7 @@ requirements:
     - six >=1.5.0
     - smart_open >=1.8.1  
     - setuptools
-    - libxcrypt  # [linux]      
+    - libxcrypt  # [linux or arm64]      
   run:
     - python <=3.9
     - {{ pin_compatible('numpy') }}
