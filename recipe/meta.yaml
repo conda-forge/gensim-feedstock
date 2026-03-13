@@ -10,7 +10,7 @@ source:
   sha256: 0c1c8984f18512aba04332b45dc58698ac277dfa1d314a190a3f07edc48c31ac
 
 build:
-  number: 3
+  number: 4
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
@@ -32,7 +32,7 @@ requirements:
     - wheelhouse_uploader
   run:
     - python
-    - {{ pin_compatible('numpy') }}
+    - numpy >=1.21.0
     - scipy >=1.7.0
     - six >=1.5.0
     - smart_open >=1.8.1
